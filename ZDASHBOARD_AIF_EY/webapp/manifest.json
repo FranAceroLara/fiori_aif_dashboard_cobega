@@ -1,0 +1,127 @@
+{
+	"_version": "1.1.0",
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "sap.suite.ui.commons.demokit.tutorial.icecream.11",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{title}}",
+		"description": "{{appDescription}}",
+		"resources": "resources.json",
+		"ach": "ach",
+		"dataSources": {
+			"ZAIF_DASHBOARD_V2_SRV_01": {
+				"uri": "/sap/opu/odata/sap/ZAIF_DASHBOARD_V2_SRV_01/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/ZAIF_DASHBOARD_V2_SRV_01/metadata.xml"
+				}
+			}
+		},
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponentForManifest",
+			"version": "0.0.0"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_hcw",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"rootView": {
+			"viewName": "sap.suite.ui.commons.demokit.tutorial.icecream.11.view.App",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.60.0",
+			"libs": {
+				"sap.m": {},
+				"sap.suite.ui.microchart": {},
+				"sap.ui.commons": {},
+				"sap.ui.core": {},
+				"sap.ui.layout": {},
+				"sap.viz": {
+					"minVersion": ""
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "sap.suite.ui.commons.demokit.tutorial.icecream.11.i18n.i18n"
+				}
+			},
+			"aiferrors": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "ZAIF_DASHBOARD_V2_SRV_01"
+			}
+		},
+		"config": {
+			"fullWidth": true
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "sap.suite.ui.commons.demokit.tutorial.icecream.11.view",
+				"controlId": "DashboardAifApp",
+				"controlAggregation": "pages",
+				"transition": "slide",
+				"bypassed": {
+					"target": [
+						"startpage"
+					]
+				}
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "startpage",
+					"target": "startpage"
+				}
+			],
+			"targets": {
+				"startpage": {
+					"viewName": "Startpage",
+					"viewLevel": 0
+				}
+			}
+		}
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/zdashboard_aif/webapp",
+		"_version": "1.1.0"
+	}
+}

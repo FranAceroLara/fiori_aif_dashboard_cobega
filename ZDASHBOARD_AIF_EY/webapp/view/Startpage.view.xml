@@ -1,0 +1,262 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.suite.ui.commons" xmlns:m="sap.m" xmlns:mc="sap.suite.ui.microchart" xmlns:vizControls="sap.viz.ui5.controls" xmlns:vizData="sap.viz.ui5.data" xmlns:vizFeeds="sap.viz.ui5.controls.common.feeds"
+	controllerName="sap.suite.ui.commons.demokit.tutorial.icecream.11.controller.Startpage">
+	<m:Page title="Replication errors" showNavButton="false" navButtonPress=".onNavButtonPressed" backgroundDesign="Solid">
+		<m:content>
+			<m:ObjectHeader responsive="true">
+				<m:headerContainer>
+					<m:HeaderContainer scrollStep="100" scrollTime="500" showDividers="false" class="sapUiSmallMargin" height="8em">
+						<m:FlexBox width="10rem" height="10rem" alignItems="Center" justifyContent="Center" direction="Column">
+							<m:Title class="sapUiSmallMargin"/>
+							<m:FlexBox width="8rem" height="8rem" alignItems="Center" justifyContent="Center" direction="Column">
+								<m:items>
+									<m:Image src="/sap/bc/ui5_ui5/sap/zdashboard_aif/images/cobega.png" width="8rem"/>
+								</m:items>
+							</m:FlexBox>
+						</m:FlexBox>
+						<m:FlexBox width="10rem" height="6rem" alignItems="Center" justifyContent="Center" direction="Column" renderType="Bare"> 
+							<mc:ComparisonMicroChart id="mcChart1" size="Responsive" press=".press" data="{path:''}">
+								<mc:data>
+									<mc:ComparisonMicroChartData title="{errortype}" value="{errors}" displayValue="{errors}" color="{color}"/>
+								</mc:data>
+							</mc:ComparisonMicroChart>
+						</m:FlexBox> 
+						<m:FlexBox width="23rem" height="10rem" alignItems="Center" justifyContent="Center" direction="Column">
+							<m:Title class="sapUiSmallMargin"/>
+							<m:FlexBox width="24rem" height="12rem" renderType="Bare">
+								<vizControls:VizFrame 
+									id="idVizFrame" 
+									uiConfig="{applicationSet:'fiori'}" 
+									height="100%" 
+									width="100%" 
+									vizType='line' 
+									vizProperties="{
+										title:{ visible: false },
+										legend:{ visible: false },
+										plotArea:{
+											dataLabel:{ visible: true },
+											colorPalette: ['#FF0000'],
+											gridline: {	visible: false },
+											window:{
+												
+											}
+										},
+										valueAxis: { 
+											visible: true, 
+											label:{ visible: false }, 
+											title: { visible: false }, 
+											scale: { }
+										}, 
+										categoryAxis: { 
+											label:{ visible: true },
+											title: { visible: false } 
+										} 
+									}">
+									<vizControls:dataset>
+										<vizData:FlattenedDataset>
+											<vizData:dimensions>
+												<vizData:DimensionDefinition
+													name="Days"
+													value="{X}"/>
+											</vizData:dimensions>
+											<vizData:measures>
+												<vizData:MeasureDefinition name="Errors" value="{Y}"/>
+											</vizData:measures>
+										</vizData:FlattenedDataset>
+									</vizControls:dataset>
+									<vizControls:feeds>
+										<vizFeeds:FeedItem uid="valueAxis" type="Measure" values="Errors"/>
+										<vizFeeds:FeedItem uid="categoryAxis" type="Dimension" values="Days"/>
+									</vizControls:feeds>
+								</vizControls:VizFrame>
+							</m:FlexBox>
+						</m:FlexBox>
+						<m:FlexBox width="8rem" height="6rem" alignItems="Center" justifyContent="Center" direction="Row">
+							<m:Title class="sapUiSmallMargin"/>
+							<m:FlexBox width="6rem" height="6rem" renderType="Bare">
+								<m:IconTabHeader selectedKey="__filter3" id="header0">
+									<m:items>
+										<m:IconTabFilter text="Source" icon="sap-icon://it-system" iconColor="{viewSettings>/SourceColor}" id="filter1"/>
+										<m:IconTabSeparator icon="sap-icon://process"/>
+										<m:IconTabFilter text="SLT" icon="sap-icon://feed" iconColor="{viewSettings>/SLTColor}" id="filter2"/>
+										<m:IconTabSeparator icon="sap-icon://process"/>
+										<m:IconTabFilter text="Destination" icon="sap-icon://it-host" iconColor="{viewSettings>/DestinationColor}" id="filter3"/>
+									</m:items>
+								</m:IconTabHeader>
+							</m:FlexBox>
+						</m:FlexBox>
+					</m:HeaderContainer>
+				</m:headerContainer>
+			</m:ObjectHeader>
+			<m:ObjectHeader responsive="true">
+				<m:headerContainer>
+					<m:HeaderContainer scrollStep="100" scrollTime="500" showDividers="false" class="sapUiSmallMargin" height="8em">
+						<m:FlexBox width="10rem" height="10rem" alignItems="Center" justifyContent="Center" direction="Column">
+							<m:Title class="sapUiSmallMargin"/>
+							<m:FlexBox width="8rem" height="8rem" alignItems="Center" justifyContent="Center" direction="Column">
+								<m:items>
+									<m:Image src="/sap/bc/ui5_ui5/sap/zdashboard_aif/images//daufoodv2.png" width="8rem"/>
+								</m:items>
+							</m:FlexBox>
+						</m:FlexBox>
+						<m:FlexBox width="10rem" height="6rem" alignItems="Center" justifyContent="Center" direction="Column" renderType="Bare"> 
+							<mc:ComparisonMicroChart id="mcChart2" size="Responsive" press=".press" data="{path:''}">
+								<mc:data>
+									<mc:ComparisonMicroChartData title="{errortype}" value="{errors}" displayValue="{errors}" color="{color}"/>
+								</mc:data>
+							</mc:ComparisonMicroChart>
+						</m:FlexBox>
+						<m:FlexBox width="23rem" height="10rem" alignItems="Center" justifyContent="Center" direction="Column">
+							<m:Title class="sapUiSmallMargin"/>
+							<m:FlexBox width="24rem" height="12rem" renderType="Bare">
+								<vizControls:VizFrame 
+									id="idVizFrame2" 
+									uiConfig="{applicationSet:'fiori'}" 
+									height="100%" 
+									width="100%" 
+									vizType='line' 
+									vizProperties="{
+										title:{ visible: false },
+										legend:{ visible: false },
+										plotArea:{
+											dataLabel:{ visible: true },
+											colorPalette: ['#FF0000'],
+											gridline: {	visible: false },
+											window:{
+												
+											}
+										},
+										valueAxis: { 
+											visible: true, 
+											label:{ visible: false }, 
+											title: { visible: false }, 
+											scale: { }
+										}, 
+										categoryAxis: { 
+											label:{ visible: true },
+											title: { visible: false } 
+										} 
+									}">
+									<vizControls:dataset>
+										<vizData:FlattenedDataset>
+											<vizData:dimensions>
+												<vizData:DimensionDefinition
+													name="Days"
+													value="{X}"/>
+											</vizData:dimensions>
+											<vizData:measures>
+												<vizData:MeasureDefinition name="Errors" value="{Y}"/>
+											</vizData:measures>
+										</vizData:FlattenedDataset>
+									</vizControls:dataset>
+									<vizControls:feeds>
+										<vizFeeds:FeedItem uid="valueAxis" type="Measure" values="Errors"/>
+										<vizFeeds:FeedItem uid="categoryAxis" type="Dimension" values="Days"/>
+									</vizControls:feeds>
+								</vizControls:VizFrame>
+							</m:FlexBox>
+						</m:FlexBox>
+						<m:FlexBox	width="8rem" height="8rem" alignItems="Center" justifyContent="Center" direction="Row">
+							<m:Title class="sapUiSmallMargin"/>
+							<m:FlexBox	width="6rem"  height="6rem"  	renderType="Bare">
+								<m:IconTabHeader selectedKey="__filter3"  id="header20">
+									<m:items>
+										<m:IconTabFilter text="Source" icon="sap-icon://it-system" iconColor="{viewSettings>/SourceColor}" id="filter12"/>
+										<m:IconTabSeparator icon="sap-icon://process"/>
+										<m:IconTabFilter text="SLT" icon="sap-icon://feed" iconColor="{viewSettings>/SLTColor}" id="filter22"/>
+										<m:IconTabSeparator icon="sap-icon://process"/>
+										<m:IconTabFilter text="Destination" icon="sap-icon://it-host" iconColor="{viewSettings>/DestinationColor}" id="filter32"/>
+									</m:items>
+								</m:IconTabHeader>
+							</m:FlexBox>
+						</m:FlexBox>
+					</m:HeaderContainer>
+				</m:headerContainer>
+			</m:ObjectHeader>
+			<m:ObjectHeader responsive="true">
+				<m:headerContainer>
+					<m:HeaderContainer scrollStep="100" scrollTime="500" showDividers="false" class="sapUiSmallMargin" height="8em">
+						<m:FlexBox width="10rem" height="10rem" alignItems="Center" justifyContent="Center" direction="Column">
+							<m:Title class="sapUiSmallMargin"/>
+							<m:FlexBox width="8rem" height="8rem" alignItems="Center" justifyContent="Center" direction="Column">
+								<m:items>
+									<m:Image src="/sap/bc/ui5_ui5/sap/zdashboard_aif/images/daba_v3.png" width="8rem"/>
+								</m:items>
+							</m:FlexBox>
+						</m:FlexBox>
+						<m:FlexBox width="10rem" height="6rem" alignItems="Center" justifyContent="Center" direction="Column" renderType="Bare">
+							<mc:ComparisonMicroChart id="mcChart3" size="Responsive" press=".press" data="{path:''}">
+								<mc:data>
+									<mc:ComparisonMicroChartData title="{errortype}" value="{errors}" displayValue="{errors}" color="{color}"/>
+								</mc:data>
+							</mc:ComparisonMicroChart>
+						</m:FlexBox>
+						<m:FlexBox width="23rem" height="10rem" alignItems="Center" justifyContent="Center" direction="Column">
+							<m:Title class="sapUiSmallMargin"/>
+							<m:FlexBox width="24rem" height="12rem" renderType="Bare">
+								<vizControls:VizFrame 
+									id="idVizFrame3" 
+									uiConfig="{applicationSet:'fiori'}" 
+									height="100%" 
+									width="100%" 
+									vizType='line' 
+									vizProperties="{
+										title:{ visible: false },
+										legend:{ visible: false },
+										plotArea:{
+											dataLabel:{ visible: true },
+											colorPalette: ['#FF0000'],
+											gridline: {	visible: false },
+											window:{
+												
+											}
+										},
+										valueAxis: { 
+											visible: true, 
+											label:{ visible: false }, 
+											title: { visible: false }, 
+											scale: { }
+										}, 
+										categoryAxis: { 
+											label:{ visible: true },
+											title: { visible: false } 
+										} 
+									}">
+									<vizControls:dataset>
+										<vizData:FlattenedDataset>
+											<vizData:dimensions>
+												<vizData:DimensionDefinition
+													name="Days"
+													value="{X}"/>
+											</vizData:dimensions>
+											<vizData:measures>
+												<vizData:MeasureDefinition name="Errors" value="{Y}"/>
+											</vizData:measures>
+										</vizData:FlattenedDataset>
+									</vizControls:dataset>
+									<vizControls:feeds>
+										<vizFeeds:FeedItem uid="valueAxis" type="Measure" values="Errors"/>
+										<vizFeeds:FeedItem uid="categoryAxis" type="Dimension" values="Days"/>
+									</vizControls:feeds>
+								</vizControls:VizFrame>
+							</m:FlexBox>
+						</m:FlexBox>
+						<m:FlexBox width="8rem" height="8rem" alignItems="Center" justifyContent="Center" direction="Row">
+							<m:Title class="sapUiSmallMargin"/>
+							<m:FlexBox width="6rem" height="6rem" renderType="Bare">
+								<m:IconTabHeader selectedKey="__filter30" id="header230">
+									<m:items>
+										<m:IconTabFilter text="Source" icon="sap-icon://it-system" iconColor="{viewSettings>/SourceColor}" id="filter13" />
+										<m:IconTabSeparator icon="sap-icon://process"/>
+										<m:IconTabFilter text="SLT" icon="sap-icon://feed" iconColor="{viewSettings>/SLTColor}" id="filter223"/>
+										<m:IconTabSeparator icon="sap-icon://process"/>
+										<m:IconTabFilter text="Destination" icon="sap-icon://it-host" iconColor="{viewSettings>/DestinationColor}" id="filter323"/>
+									</m:items>
+								</m:IconTabHeader>
+							</m:FlexBox>
+						</m:FlexBox>
+					</m:HeaderContainer>
+				</m:headerContainer>
+			</m:ObjectHeader>
+		</m:content>
+	</m:Page>
+</mvc:View>

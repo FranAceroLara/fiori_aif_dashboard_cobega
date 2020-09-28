@@ -1,0 +1,58 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZAIF_DASHBOARD_V2_SRV_01" xml:lang="es" sap:schema-version="1">
+			<EntityType Name="cobe_state_server" sap:content-version="1">
+				<Key><PropertyRef Name="Source"/><PropertyRef Name="Slt"/><PropertyRef Name="Destination"/></Key><Property Name="Source" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="SOURCE" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Slt" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="SLT" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Destination" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="DESTINATION"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="dauf_state_server" sap:content-version="1">
+				<Key><PropertyRef Name="Source"/><PropertyRef Name="Slt"/><PropertyRef Name="Destination"/></Key><Property Name="Source" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="SOURCE" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Slt" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="SLT" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Destination" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="DESTINATION"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="daba_state_server" sap:content-version="1">
+				<Key><PropertyRef Name="Source"/><PropertyRef Name="Slt"/><PropertyRef Name="Destination"/></Key><Property Name="Source" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="SOURCE" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Slt" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="SLT" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Destination" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="DESTINATION"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="cobe_graf_bar" sap:content-version="1">
+				<Key><PropertyRef Name="Title"/></Key><Property Name="Title" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="TITLE" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="VALUE" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Color" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="COLOR" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="dauf_graf_bar" sap:content-version="1">
+				<Key><PropertyRef Name="Title"/></Key><Property Name="Title" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="TITLE" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="VALUE" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Color" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="COLOR" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="daba_graf_bar" sap:content-version="1">
+				<Key><PropertyRef Name="Title"/></Key><Property Name="Title" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="TITLE" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="VALUE" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Color" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="COLOR" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="cobe_graf_point" sap:content-version="1">
+				<Key><PropertyRef Name="X"/></Key><Property Name="X" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="X" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Y" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Y" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="daba_graf_point" sap:content-version="1">
+				<Key><PropertyRef Name="X"/></Key><Property Name="X" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="X" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Y" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Y" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="dauf_graf_point" sap:content-version="1">
+				<Key><PropertyRef Name="X"/></Key><Property Name="X" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="X" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Y" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Y" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityContainer Name="ZAIF_DASHBOARD_V2_SRV_01_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="cobe_state_serverSet" EntityType="ZAIF_DASHBOARD_V2_SRV_01.cobe_state_server" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="dauf_state_serverSet" EntityType="ZAIF_DASHBOARD_V2_SRV_01.dauf_state_server" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="daba_state_serverSet" EntityType="ZAIF_DASHBOARD_V2_SRV_01.daba_state_server" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="cobe_graf_barSet" EntityType="ZAIF_DASHBOARD_V2_SRV_01.cobe_graf_bar" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="dauf_graf_barSet" EntityType="ZAIF_DASHBOARD_V2_SRV_01.dauf_graf_bar" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="daba_graf_barSet" EntityType="ZAIF_DASHBOARD_V2_SRV_01.daba_graf_bar" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="cobe_graf_pointSet" EntityType="ZAIF_DASHBOARD_V2_SRV_01.cobe_graf_point" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="daba_graf_pointSet" EntityType="ZAIF_DASHBOARD_V2_SRV_01.daba_graf_point" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="dauf_graf_pointSet" EntityType="ZAIF_DASHBOARD_V2_SRV_01.dauf_graf_point" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/></EntityContainer><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZAIF_DASHBOARD_V2_SRV_01/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZAIF_DASHBOARD_V2_SRV_01/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
